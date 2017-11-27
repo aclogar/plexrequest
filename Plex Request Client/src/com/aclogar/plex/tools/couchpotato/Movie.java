@@ -10,12 +10,11 @@ public class Movie {
 	private String year;
 	private String imdb;
 
-	public Movie(String tmdbid, String original_title, String mpaa, String alt_title, String year, String imdb) {
+	public Movie(String tmdbid, String original_title, String mpaa, String year, String imdb) {
 		super();
 		this.tmdbid = tmdbid;
 		this.original_title = original_title;
 		this.mpaa = mpaa;
-		this.alt_title = alt_title;
 		this.year = year;
 		this.imdb = imdb;
 	}	
@@ -44,4 +43,12 @@ public class Movie {
 		this.alt_title = alt_title;
 	}
 
+	@Override
+	public String toString() {
+		return "Movie [tmdbid=" + tmdbid + ", original_title=" + original_title + ", mpaa=" + mpaa + ", year=" + year
+				+ ", imdb=" + imdb + "]";
+	}
+
+	
+	
 }

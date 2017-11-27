@@ -1,6 +1,9 @@
 package com.aclogar.plex.tools.tvdb;
 
+import java.util.Iterator;
 import java.util.List;
+
+import com.aclogar.plex.tools.couchpotato.Movie;
 
 public class testAPI {
 
@@ -14,7 +17,10 @@ public class testAPI {
 //			System.out.println(s);
 //		}
 		
-		com.aclogar.plex.tools.couchpotato.API.searchMovies("anchorman");
+		List<Movie> movies = com.aclogar.plex.tools.couchpotato.API.searchMovies("anchorman");
+		for (Movie movie : movies) {
+			System.out.println(movie);
+		}
 	}
 	
 }
