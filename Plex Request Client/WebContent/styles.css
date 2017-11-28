@@ -140,7 +140,7 @@
     font-size: 13px;
     font-weight: 400;
     background: #111;
-    background: linear-gradient(#666, #111);
+    background: linear-gradient(#353535, #111);
     border: 1px solid #000;
     border-radius: 5px;
     max-width: 500px;
@@ -181,7 +181,9 @@
 .webdesigntuts-workshop-form th {
     background: #222;
     background: linear-gradient(#444, #000);
-
+    font-family: 'Cabin', helvetica, arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 .webdesigntuts-workshop-form table {
