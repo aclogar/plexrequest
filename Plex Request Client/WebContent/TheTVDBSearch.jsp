@@ -35,13 +35,15 @@
 				for (Series s : series) {
 			%>
 			<tr>
-				<td><%=s.getSeries()%></td>
-				<td><a
-					href="https://www.thetvdb.com/?tab=series&id=<%=s.getId()%>"><%=s.getId()%></a></td>
-				<td><%=s.getFirstAir()%></td>
-				<td><input type="checkbox" name="anime" class="webdesigntuts-workshop-chk"/></td>
-				<button>Add</button>
-				<input type="hidden" name="series" value="<%=s.getId()%>" />
+				<form>
+					<td><%=s.getSeries()%></td>
+					<td><a
+						href="https://www.thetvdb.com/?tab=series&id=<%=s.getId()%>"><%=s.getId()%></a></td>
+					<td><%=s.getFirstAir()%></td>
+					<td><input type="checkbox" name="anime" class="webdesigntuts-workshop-chk"/></td>
+					<button>Add</button>
+					<input type="hidden" name="series" value="<%=s.getId()%>" />
+				</form>
 			</tr>
 			<%
 				}

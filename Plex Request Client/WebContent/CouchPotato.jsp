@@ -34,14 +34,16 @@
 				for (Movie m : movies) {
 			%>
 			<tr>
-				<td><%=m.getOriginal_title()%></td>
-				
-				<td><%=m.getYear()%></td>
-				<td><%= m.getMpaa() %></td>
-				<td><a
-					href="https://www.themoviedb.org/movie/<%=m.getTmdbid()%>"><%=m.getTmdbid()%></a></td>
-				<td><button>Add</button></td>
-				<input type="hidden" name="movieid" value="<%=m.getTmdbid()%>" />
+				<form>
+					<td><%=m.getOriginal_title()%></td>
+					
+					<td><%=m.getYear()%></td>
+					<td><%= m.getMpaa() %></td>
+					<td><a
+						href="https://www.themoviedb.org/movie/<%=m.getTmdbid()%>"><%=m.getTmdbid()%></a></td>
+					<td><button>Add</button></td>
+					<input type="hidden" name="movieid" value="<%=m.getTmdbid()%>" />
+				</form>
 			</tr>
 			<%
 				}
