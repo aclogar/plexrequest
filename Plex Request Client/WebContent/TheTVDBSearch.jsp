@@ -24,11 +24,11 @@
 	<form class="webdesigntuts-workshop-form">
 		<table>
 			<tr>
-				<td>Title</td>
-				<td>Series ID</a></td>
-				<td>First Aired Date</td>
-				<td>Anime?</td>
-				<td></td>
+				<th>Title</th>
+				<th>Series ID</a></th>
+				<th>First Aired Date</th>
+				<th>Anime?</th>
+				<th></th>
 			</tr>
 
 			<%
@@ -39,7 +39,7 @@
 				<td><a
 					href="https://www.thetvdb.com/?tab=series&id=<%=s.getId()%>"><%=s.getId()%></a></td>
 				<td><%=s.getFirstAir()%></td>
-				<td><input type="checkbox" name="anime"/></td>
+				<td><input type="checkbox" name="anime" class="webdesigntuts-workshop-chk"/></td>
 				<td><button>Add</button></td>
 				<input type="hidden" name="series" value="<%=s.getId()%>" />
 			</tr>
