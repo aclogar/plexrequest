@@ -8,11 +8,7 @@
 <title>Search Items</title>
 </head>
 <body>
-	<section class="webdesigntuts-workshop">
-	<form action="TheTVDBSearch.jsp" method="">
-		<input type="text" name="query" placeholder="What are you looking for?">
-		<button>Search</button>
-	</form>
-	</section>
+	<a href="tv.jsp">Shows!</a>
+	<a href="movies.jsp">Movies</a>
 </body>
 </html>
