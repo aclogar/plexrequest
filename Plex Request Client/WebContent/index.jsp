@@ -8,7 +8,9 @@
 <title>Search Items</title>
 </head>
 <body>
-	<a href="tv.jsp">Shows!</a>
-	<a href="movies.jsp">Movies</a>
+	<div class="index-plex-request">
+		<a href="tv.jsp"><button>Shows!</button></a>
+		<a href="movies.jsp"><button>Movies!</button></a>
+	</div>
 </body>
 </html>
