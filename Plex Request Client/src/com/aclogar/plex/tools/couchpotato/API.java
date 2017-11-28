@@ -58,11 +58,11 @@ public class API {
 		return returnMovies;
 	}
 
-	public String addMovie(String querey) {
+	public static String addMovie(String id) {
 		List<Properties> props = new ArrayList<Properties>();
-		props.add(new Properties(querey, "tmdb_id"));
+		props.add(new Properties(id, "identifier"));
 
-		return callCouchPotato("search", APIKey, props).toJSONString();
+		return callCouchPotato("movie.add", APIKey, props).toJSONString();
 	}
 
 }

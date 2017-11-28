@@ -16,11 +16,13 @@ public class testAPI {
 //		for (Series s : series) {
 //			System.out.println(s);
 //		}
+		System.out.println(com.aclogar.plex.tools.couchpotato.API.addMovie("tt1396484"));
 		
-		List<Movie> movies = com.aclogar.plex.tools.couchpotato.API.searchMovies("anchorman");
-		for (Movie movie : movies) {
-			System.out.println(movie);
-		}
+		
+//		List<Movie> movies = com.aclogar.plex.tools.couchpotato.API.searchMovies("anchorman");
+//		for (Movie movie : movies) {
+//			System.out.println(movie);
+//		}
 	}
 	
 }

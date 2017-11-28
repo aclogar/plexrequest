@@ -40,9 +40,9 @@
 					<td><%=m.getYear()%></td>
 					<td><%= m.getMpaa() %></td>
 					<td><a
-						href="https://www.themoviedb.org/movie/<%=m.getTmdbid()%>"><%=m.getTmdbid()%></a></td>
+						href="http://www.imdb.com/title/<%=m.getImdb()%>"><%=m.getImdb()%></a></td>
 					<td><button>Add</button></td>
-					<input type="hidden" name="movieid" value="<%=m.getTmdbid()%>" />
+					<input type="hidden" name="movieid" value="<%=m.getImdb() %>" />
 				</form>
 			</tr>
 			<%
@@ -53,14 +53,19 @@
 	<%
 		}
 		} else {
-			/*API api = new API();
-			boolean anime = request.getParameter("anime") != null && request.getParameter("anime").equals("on");
-			System.out.print("Anime value = "+ anime);
-			
-			String result = api.addNewShow(request.getParameter("series"), "wanted", anime);*/
-		%> 
-		<p>Still need to add the Api to add this movie.</p>
-		<%
+			API api = new API();
+			String id = request.getParameter("movieid");
+			System.out.print("Adding movie with id of "+ id);
+			if(id != null){
+				String result = api.addMovie(id);
+				%> 
+				<p><%= result %></p>
+				<%
+			}else{
+				%> 
+				<p>Movie ID was null.</p>
+				<%
+			}
 		}
 	%>
 
