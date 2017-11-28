@@ -51,8 +51,8 @@ public class API {
 
 			JSONObject movie = (JSONObject) movies.get(i);
 			System.out.println(movie.get("tmdb_id"));
-			returnMovies.add(new Movie(movie.get("tmdb_id").toString(), movie.get("original_title").toString(), movie.get("mpaa").toString(),
-					movie.get("year").toString(), movie.get("imdb").toString()));
+			returnMovies.add(new Movie(getText(movie, "tmdb_id"), getText(movie, "original_title"),
+					getText(movie, "mpaa"), getText(movie, "year"), getText(movie, "imdb")));
 		}
 
 		return returnMovies;
@@ -63,6 +63,12 @@ public class API {
 		props.add(new Properties(id, "identifier"));
 
 		return callCouchPotato("movie.add", APIKey, props).toJSONString();
+	}
+
+	private static String getText(JSONObject obj, String key) {
+		Object value = obj.get(key);
+
+		return value == null ? "" : value.toString();
 	}
 
 }
